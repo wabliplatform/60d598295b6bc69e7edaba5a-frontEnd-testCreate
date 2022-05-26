@@ -1,0 +1,3 @@
+let apiQwertyApi = new TempApi.QwertyApi();import TempApi from '../src/index';let qwerty = new TempApi.Qwerty();document.getElementById('ieedu').onclick = (event) => {
+    event.preventDefault();
+    qwerty['qTitle'] = document.querySelector("[annotationname = 'qTitle']").value;apiQwertyApi.createqwerty( qwerty, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); }});};window.onload = () => {};
